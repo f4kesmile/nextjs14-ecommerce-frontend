@@ -2,7 +2,7 @@ import { Category } from "@/types";
 
 const getCategories = async (storeId: string): Promise<Category[]> => {
   try {
-    const res = await fetch(`https://ecommerce-backend-indol-nu.vercel.app/api/${storeId}/categories`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/categories`, {
       cache: "no-cache",
     });
 
